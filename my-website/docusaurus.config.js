@@ -43,8 +43,7 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          breadcrumbs: false,
         },
         blog: {
           showReadingTime: true,
@@ -66,22 +65,36 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: "Milind's Homepage",
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
+      
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Course Econometrics',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            type: 'docSidebar',
+            sidebarId: 'mlSidebar',
+            position: 'left',
+            label: 'Machine Learning',
+            
+          },
+          /*{to: '/blog', label: 'Blog', position: 'left'},*/
+          
+          {
+            to: 'https://github.com/milindv26',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            to: 'https://www.linkedin.com/in/milindv26/',
+            label: 'LinkedIn',
             position: 'right',
           },
         ],
@@ -90,15 +103,15 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'LinkedIn',
+                to: 'https://www.linkedin.com/in/milindv26/',
               },
             ],
           },
-          {
+          /*{
             title: 'Community',
             items: [
               {
@@ -127,9 +140,9 @@ const config = {
                 href: 'https://github.com/facebook/docusaurus',
               },
             ],
-          },
+          },*/
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Milind Milind`,
       },
       prism: {
         theme: prismThemes.github,

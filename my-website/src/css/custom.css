@@ -37,3 +37,5 @@
 .footer__copyright {
   text-align: left;
 }
+
+@import 'katex/dist/katex.min.css';

@@ -44,3 +44,7 @@
 .footer--dark {
   --ifm-footer-background-color: #f2f3f3;
 }
+
+.navbar__title {
+  font-weight: bold;
+}

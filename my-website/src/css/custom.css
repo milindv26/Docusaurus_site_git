@@ -36,6 +36,11 @@
 /* src/css/custom.css */
 .footer__copyright {
   text-align: left;
+  color: #a1a7aa;
 }
 
 @import 'katex/dist/katex.min.css';
+
+.footer--dark {
+  --ifm-footer-background-color: #f2f3f3;
+}

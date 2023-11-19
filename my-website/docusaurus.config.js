@@ -76,10 +76,10 @@ const config = {
       
         items: [
           
-          { to:'https://macropy.com/notebooks',
+          { type: 'docSidebar',
+            sidebarId: 'jnbSidebar',
             label: "Jupyter Notebooks",
             position: 'left',
-            target: '_self',
           },
           {
             type: 'docSidebar',
@@ -92,6 +92,21 @@ const config = {
             sidebarId: 'mlSidebar',
             position: 'left',
             label: 'Machine Learning',
+            
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'mlSidebar',
+            position: 'left',
+            label: 'Empirical IO',
+            
+          },
+
+          {
+            type: 'docSidebar',
+            sidebarId: 'mlSidebar',
+            position: 'left',
+            label: 'Frequent Commands',
             
           },
           /*{to: '/blog', label: 'Blog', position: 'left'},*/
@@ -109,10 +124,10 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         
         
-        copyright: `Copyright © ${new Date().getFullYear()} Milind Milind`,
+        copyright: `Copyright © ${new Date().getFullYear()} Milind Milind.`,
       },
       prism: {
         theme: prismThemes.github,

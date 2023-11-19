@@ -80,6 +80,7 @@ const config = {
             to: 'https://macropy.com/',
             label: "Milind's Homepage",
             position: 'left',
+            target: '_self',
             
           },
           { type: 'docSidebar',
@@ -110,7 +111,7 @@ const config = {
 
           {
             type: 'docSidebar',
-            sidebarId: 'mlSidebar',
+            sidebarId: 'fqcmdSidebar',
             position: 'left',
             label: 'Frequent Commands',
             

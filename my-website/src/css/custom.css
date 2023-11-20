@@ -45,6 +45,9 @@
   --ifm-footer-background-color: #f2f3f3;
 }
 
-.navbar__title {
-  font-weight: bold;
+
+.custom-homepage-link {
+    font-weight: bold;
+    font-size: 18px;
+  /* Add other CSS properties as needed */
 }

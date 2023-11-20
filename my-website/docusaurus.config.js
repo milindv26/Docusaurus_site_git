@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'Notebooks and Courses',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -69,7 +69,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       
       navbar: {
-        /*title: "Milind's Homepage",
+        /*title: "Milind's Homage",
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -81,12 +81,14 @@ const config = {
             label: "Milind's Homepage",
             position: 'left',
             target: '_self',
+            className: 'custom-homepage-link', 
             
           },
           { type: 'docSidebar',
             sidebarId: 'jnbSidebar',
             label: "Jupyter Notebooks",
             position: 'left',
+            
           },
           {
             type: 'docSidebar',

@@ -2,8 +2,16 @@
 sidebar_position: 1
 ---
 
-# GitHub commands
+# Terminal commands
 
+* Activate conda environment:
+```
+conda activate my_environment
+```
+* Remove conda environment:
+```
+conda env remove --name my_environment
+```
 * Git remote repository url:
 ```
 git remote -v
@@ -19,4 +27,8 @@ yarn start
 * Git merge unrelated histories:
 ```
 git pull --allow-unrelated-histories <repository_name> main
+```
+* Convert .ipynb to .md:
+```
+$ jupyter nbconvert --to markdown notebook.ipynb
 ```

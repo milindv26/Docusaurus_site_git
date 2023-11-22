@@ -4,10 +4,13 @@
  */
 
 .heroBanner {
+  flex-grow: 1;
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  color: #4c4c54;
+  background-color: white;
 }
 
 @media screen and (max-width: 996px) {

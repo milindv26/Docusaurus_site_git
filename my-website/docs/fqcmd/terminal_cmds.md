@@ -30,5 +30,5 @@ git pull --allow-unrelated-histories <repository_name> main
 ```
 * Convert .ipynb to .md:
 ```
-$ jupyter nbconvert --to markdown notebook.ipynb
+jupyter nbconvert --to markdown notebook.ipynb
 ```

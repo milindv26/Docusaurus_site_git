@@ -51,3 +51,10 @@
     font-size: 18px;
   /* Add other CSS properties as needed */
 }
+
+.header-github-link:before {
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f09b"; 
+  padding-right: 0.5rem;
+}
+

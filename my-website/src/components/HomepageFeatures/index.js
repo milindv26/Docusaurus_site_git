@@ -2,8 +2,10 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+
+
 const FeatureList = [
-  {
+  /*{
     title: 'Easy to Use',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
@@ -32,7 +34,7 @@ const FeatureList = [
         be extended while reusing the same header and footer.
       </>
     ),
-  },
+  },*/
 ];
 
 function Feature({Svg, title, description}) {

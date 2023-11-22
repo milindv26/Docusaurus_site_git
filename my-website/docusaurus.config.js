@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Notebooks and Courses',
-  tagline: 'Dinosaurs are cool',
+  title: 'Welcome to my digital Notebooks',
+  tagline: 'Here you can find various jupyter notebooks on to many interesting topics ',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -125,6 +125,7 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          
           {
             to: 'https://www.linkedin.com/in/milindv26/',
             label: 'LinkedIn',

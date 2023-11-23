@@ -32,3 +32,7 @@ git pull --allow-unrelated-histories <repository_name> main
 ```
 jupyter nbconvert --to markdown notebook.ipynb
 ```
+* Justify command from .md to HTML through JDX
+```
+<div style={{ textAlign: 'justify' }}>
+```

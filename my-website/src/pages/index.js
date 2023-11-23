@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/jnb/W_Statistic_distribution">
+            to="/docs/jnb/Debunking_the_Solow_Model">
             Let's start with some cool Jupyter notebooks! 📚
           </Link>
         </div>

@@ -1,10 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 # Shapiro Wilk test
-
+https://github.com/milindv26/Shapiro_Wilk_Test
 ## Introduction
-
+<div style={{ textAlign: 'justify' }}>
 The Shapiro-Wilk test is a widely used statistical procedure for testing the normality of a data set. Developed by Samuel Shapiro and Martin Wilk in 1965, this test is particularly effective for small sample sizes, typically considered to be less than 50. The test calculates a statistic, often denoted as W, which evaluates the degree to which a set of data conforms to a normal distribution.
 
 Here's a brief overview of the test:
@@ -22,6 +22,7 @@ Here's a brief overview of the test:
 Overall, the Shapiro-Wilk test is a fundamental tool in statistics for assessing the normality of data, providing an essential step in many analytical procedures.
 
 **In this Jupyter notebook, we're going to create a distribution chart for the W statistic, using a sample size of n, by employing Monte Carlo simulation methods. Subsequently, we will evaluate and contrast the outcomes of our self-generated W statistic against the results from the Shapiro test, which is a built-in feature of the Scipy library.**
+</div>
 
 ## W statistic
 
@@ -47,8 +48,9 @@ $m := [m_1, m_2, ..., m_n]$, where $m_i:= \mathbb{E}[Z_{(i)}]$
 
 $Z_{(i)}$ is $i^{th}$ order statistic. And $Z_i$ is $i.i.d$ $N(0,1)$
 
-**Note:** $\mathbb{E}[Z_{(i)}]$ of order statistics depends on sample size. It is because order statistics are determined by the ranks of the data points in a sample, and as the sample size changes, the distribution of these ranks changes. As the sample size increases, the range of possible values for a particular order statistic also increases. For instance, the maximum value in a larger sample is likely to be greater than the maximum in a smaller sample simply because there are more data points from which the maximum can be drawn.
-
+<div style={{ textAlign: 'justify' }}>
+**Note:** $\mathbb{E}[Z_{(i)}]$ of order statistics varies with the size of the sample. This variation is due to the fact that order statistics are influenced by the ranking of data points within a sample. With changes in sample size, the distribution of these rankings shifts. As we observe an increase in sample size, the scope of potential values for any specific order statistic broadens. For example, the largest value in a bigger sample is typically higher than that in a smaller one, owing to the greater number of data points available to determine the maximum.
+</div>
 
 ### Calculating expectation of order statistics
 

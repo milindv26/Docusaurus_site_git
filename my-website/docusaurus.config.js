@@ -89,8 +89,8 @@ const config = {
             label: "Jupyter Notebooks",
             position: 'left',
             
-          },
-          /*{
+          },/*
+          {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',

@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/jnb/Debunking_the_Solow_Model">
-            Let's start with some cool Jupyter notebooks! 📚
+            Let's start 🚀
           </Link>
         </div>
       </div>
@@ -32,7 +32,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Notebooks and Course`}
+      title={`Notebooks and Courses`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>

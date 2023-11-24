@@ -8,20 +8,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Welcome to my digital Notebooks',
-  tagline: 'Here you can find various jupyter notebooks on many interesting topics ',
+  title: 'Welcome to my digital Notebooks!',
+  tagline: 'Here you can find various jupyter notebooks on many interesting topics. ',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://macropy.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Docusaurus_site_git/',
+  baseUrl: '/Notebooks_Courses/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'milindv26', // Usually your GitHub org/user name.
-  projectName: 'Docusaurus_site_git', // Usually your repo name.
+  projectName: 'Notebooks_Courses', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -90,7 +90,7 @@ const config = {
             position: 'left',
             
           },
-          {
+          /*{
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
@@ -102,10 +102,10 @@ const config = {
             position: 'left',
             label: 'Machine Learning',
             
-          },
+          },*/
           {
             type: 'docSidebar',
-            sidebarId: 'mlSidebar',
+            sidebarId: 'empiricalio',
             position: 'left',
             label: 'Empirical IO',
             

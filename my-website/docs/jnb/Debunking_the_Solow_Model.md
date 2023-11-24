@@ -688,7 +688,7 @@ Although the independence assumption could be discussed, for the sake of simplic
 Using OLS method and assuming a set of assumptions we expect to obtain reliable coefficients for $s$ and $ (n + g + \delta)$. We await for a positive coefficient of $s$, a negative coefficient of the same magnitude for $ (n + g + \delta)$ and a high r2 to explain output per worker variations. Finally, we expect to obtain an implied value of $\alpha$ close to 1/3, that is the empirical share of capital found. 
 </div>
 
-### Data: 
+### Data
 
 The data used for the this empirical analysis is taken from the Real National Accounts (Summers and Heston(1988)). This data is publically available by Professor Bruce E. Hansen of University of Wisconsin Madison, USA (https://www.ssc.wisc.edu/~bhansen/econometrics/MRW1992.xlsx). It is the same dataset used in Mankiw, Romer, Weil (1992)
 

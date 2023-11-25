@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 # Introduction
 <div style={{ textAlign: 'justify' }}>
+These notes are taken from YouTube video lectures by [Matt Woerman.](https://www.youtube.com/@ResEcon703UMassAmherst)
 
 ## What is Structural Econometrics?
 

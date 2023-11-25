@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 ---
-# Shapiro Wilk test
-https://github.com/milindv26/Shapiro_Wilk_Test
+# Shapiro Wilk Test 
+[GitHub repository](https://github.com/milindv26/Shapiro_Wilk_Test)
 ## Introduction
 <div style={{ textAlign: 'justify' }}>
 The Shapiro-Wilk test is a widely used statistical procedure for testing the normality of a data set. Developed by Samuel Shapiro and Martin Wilk in 1965, this test is particularly effective for small sample sizes, typically considered to be less than 50. The test calculates a statistic, often denoted as W, which evaluates the degree to which a set of data conforms to a normal distribution.

@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 # Mankiw Romer Weil (1992)
-https://github.com/milindv26/MRW1992
+[GitHub repository](https://github.com/milindv26/MRW1992)
 ## Introduction & motivation
 <div style={{ textAlign: 'justify' }}>
 For a long time, the central question in economics has been whether there is an economic convergence across countries. Trying to adress this question, Mankiw, Romer, Weil (1992) arise as one of the most relevant papers in the field of economics. The purpose of the paper is to test the validity of the Solow model (Solow (1956)), one of the most famous frameworks to understand the economic growth process. This model attempts to explain the economic growth based on capital accumulation, labour and population growth and technology advancements (which captures the increases in productivity), setting investment as the primary source of growth. One of the striking implications of the Solow Model is that it predicts an unconditional economic convergence in the long run. Therefore, according to the model, two countries with the same parameters, but starting at the different points will end up in the same exact steady state. Consequently, once a country has the main economic and demographic parameters, the pattern of growth is just a matter of time. 

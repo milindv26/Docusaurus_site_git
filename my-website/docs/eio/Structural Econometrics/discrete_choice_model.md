@@ -76,14 +76,4 @@ A discrete choice model is a type of statistical model used to predict a decisio
 2. Estimating unknown parameters using various methods.
 
 ---
-
-## Slide 7: Random Utility Model
-
-### Model Structure
-- Based on the assumption of utility-maximizing behavior (or profit maximization for firms).
-- **Components**:
-  - Utility derived from each alternative.
-  - Dependency on observed and unobserved characteristics.
-  - Selection of the alternative providing maximum utility.
-- **Flexibility**: RUM can include behavioral and informational parameters deviating from traditional models.
 </div>

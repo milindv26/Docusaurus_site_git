@@ -1,0 +1,74 @@
+---
+sidebar_position: 1
+---
+# Definition of the Simple Regression Model
+
+### Overview
+
+**Premise**: Analyzing the relationship between two variables, $y$ and $x$, representing a population. The goal is to explain $y$ in terms of $x$ or study how $y$ varies with changes in $x$​​.
+
+**Examples**: $y$ as soybean crop yield with $x$ as the amount of fertilizer, $y$ as hourly wage with $x$ as years of education, $y$ as community crime rate with $x$ as the number of police officers.
+
+---
+
+### Model Formulation
+
+**Issues to Address**:
+    1.  Allowing for other factors to affect $y$ apart from $x$.
+    2.  Determining the functional relationship between $y$ and $x$.
+    3.  Ensuring a ceteris paribus (all else equal) relationship between $y$ and $x$​​.
+
+**Simple Equation**: $y=b_0+b_1 x+u$
+
+    *   $y$ and $x$ can have several interchangeable names:
+        *   $y$: Dependent, Explained, Response, Predicted variable, or Regressand.
+        *   $x$: Independent, Explanatory, Control, Predictor variable, or Regressor​​.
+    *   $u$: Error term or disturbance, representing unobserved factors affecting $y$​​.
+
+---
+
+### Interpretation of the Model
+
+**Functional Relationship**:
+
+    *   Linear effect of $x$ on $y$ when other factors in $u$ are held fixed​​.
+
+**Slope Parameter $(b_1)$**:
+
+    *   Represents the change in $y$ per unit change in $x$, holding other factors fixed​​.
+    *   Example: In a model where $y$ is soybean yield and $x$ is fertilizer, $b_1$​ measures the effect of fertilizer on yield, holding other factors like land quality and rainfall constant​​.
+
+**Limitation**:
+
+    *   The linearity assumption implies a constant effect of $x$ on $y$ which might be unrealistic in many economic contexts​​.
+
+---
+
+### Causal Inference and Key Assumptions
+
+**Causality Challenge**:
+
+    *   Addressing if the model can truly draw ceteris paribus conclusions about the impact of $x$ on $y$​​.
+
+**Key Assumptions**:
+    1.  **Zero Mean Assumption**:
+        *   Expected value of $u$ in the population is zero: $\mathbb{E}[u]=0$​​. This is a mathematical convenience resulting from the intercept.
+    2.  **Mean Independence**:
+        *   Expected value of $u$ does not depend on $x$: $\mathbb{E}[u∣x]=\mathbb{E}[u]$​​.
+        *   Example: If fertilizer amounts are chosen independently of other plot features, the assumption holds​​.
+*   Assumptions **Zero mean** and **Mean independence** are crucial for motivating estimators of $b_0$​ and $b_1$​ and play a significant role in statistical analysis in later sections​​.
+  
+**Population Regression Function (PRF)**:
+    *   Expressed as $\mathbb{E}[y∣x]=b_0​+b_1​x$, showing the linear relationship between $y$ and $x$ in the population​​. For any given value of $x$, the distribution of $y$ is centered about $\mathbb{E}[y∣x]$.
+
+**Ques:** Prove if $u$ and $x$ are independent, then $\mathbb{E}[u∣x]=\mathbb{E}[u]$.
+
+---
+
+### Decomposition of $y$
+
+**Systematic and Unsystematic Parts**:
+    *   $b_0+b_1x$: Systematic part, the part of $y$ explained by $x$.
+    *   $u$: Unsystematic part, the part of $y$ not explained by $x$​​.
+
+---

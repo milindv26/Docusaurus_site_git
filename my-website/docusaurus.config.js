@@ -89,13 +89,13 @@ const config = {
             label: "Jupyter Notebooks",
             position: 'left',
             
-          },/*
+          },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'ecotrixSidebar',
             position: 'left',
-            label: 'Course Econometrics',
-          },
+            label: 'Econometrics',
+          },/*
           {
             type: 'docSidebar',
             sidebarId: 'mlSidebar',

@@ -61,7 +61,7 @@ sidebar_position: 1
 **Population Regression Function (PRF)**:
     *   Expressed as $\mathbb{E}[y∣x]=b_0​+b_1​x$, showing the linear relationship between $y$ and $x$ in the population​​. For any given value of $x$, the distribution of $y$ is centered about $\mathbb{E}[y∣x]$.
 
-**Ques:** Prove if $u$ and $x$ are independent, then $\mathbb{E}[u∣x]=\mathbb{E}[u]$.
+**Question:** Prove if $u$ and $x$ are independent, then $\mathbb{E}[u∣x]=\mathbb{E}[u]$.
 
 ---
 

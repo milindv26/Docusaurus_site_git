@@ -113,6 +113,14 @@ const config = {
 
           {
             type: 'docSidebar',
+            sidebarId: 'math_statSidebar',
+            position: 'left',
+            label: 'Maths/Stats',
+            
+          },
+
+          {
+            type: 'docSidebar',
             sidebarId: 'fqcmdSidebar',
             position: 'left',
             label: 'Frequent Commands',

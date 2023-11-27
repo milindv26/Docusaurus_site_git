@@ -76,3 +76,21 @@ sidebar_position: 3
     *   Find structural parameters consistent with observed choices.
 
 ---
+
+## Properties of the Random Utility Model
+
+**General Formula for Choice Probabilities**:
+    
+*   This formula reveals two important properties about the Random Utility Model (RUM):
+
+
+    **Differences in Utility Matter**:
+        *   The focus is not on the absolute level of utility from any alternative, but rather on the differences in utility between alternatives.
+        *   Only parameters that capture these differences can be estimated.
+
+
+    **Scale of Utility is Arbitrary**:
+        *   Scaling all utilities (e.g., multiplying by a constant) does not change the relative comparison between alternatives.
+        *   Typically, the variance of the error terms is normalized in RUMs.
+
+---

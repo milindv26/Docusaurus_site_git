@@ -70,3 +70,24 @@ $$
     *   For driving:
         *   $P_{nc} = Pr(\epsilon_{nb} - \epsilon_{nc} < V_{nc} - V_{nb})$.
         *   Expanded: $P_{nc} = Pr(\epsilon_{nb} - \epsilon_{nc} < (\beta_{0c} - \beta_{0b}) + \beta_1(T_{nc} - T_{nb}) + \beta_2(M_{nc} - M_{nb}))$.
+
+---
+
+## Using Choice Probabilities To Estimate Parameters
+
+**Objective**:
+    
+    *   Estimating structural parameters of the model that describe the decision maker’s preferences and behavior.
+
+**Role of Choice Probabilities**:
+    
+    *   Choice probabilities assist in fitting the model to observed data.
+    *   A good fit is indicated when the choice probability for the selected alternative is close to 1, and for all other alternatives, it is close to 0.
+
+**Fitting the Model**:
+    
+    *   Finding structural parameters that align the model's choice probabilities with observed choices.
+
+**Methodology**:
+    
+    *   The approach depends on the assumptions made about the distribution of the unobserved utility component $(\epsilon)$.

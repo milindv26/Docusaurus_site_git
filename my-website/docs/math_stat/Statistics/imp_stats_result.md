@@ -6,7 +6,11 @@ sidebar_position: 1
 
 ## Mean independence and Covariance
 
-**Prove:** If $X$ and $U$ are mean independent then $Cov(X,U)=0$.
+**Prove:** If $X$ and $U$ are mean independent and $\mathbb{E}[U]=0$ then $Cov(X,U)=0$.
+
+*Note:* Mean independence is defined as $\mathbb{E}[U∣X]=\mathbb{E}[U]$.
+
+**Proof:**
 $$
 \begin{align*}
 Cov(X, U) &= \mathbb{E}\left[(X - \mathbb{E}[X])(U - \mathbb{E}[U])\right] \\
@@ -22,4 +26,5 @@ Cov(X, U) &= \mathbb{E}\left[(X - \mathbb{E}[X])(U - \mathbb{E}[U])\right] \\
 &= 0
 \end{align*}
 $$
+---
 

@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Welcome to my digital Notebooks!',
-  tagline: 'Here you can find various jupyter notebooks on many interesting topics. ',
+  title: 'Welcome to my digital notebooks! 📚',
+  tagline: '',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here

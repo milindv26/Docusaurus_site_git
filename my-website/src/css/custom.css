@@ -52,6 +52,12 @@
   /* Add other CSS properties as needed */
 }
 
+.custom-notebook-nav {
+  font-weight: bold;
+  font-size: 28px;
+/* Add other CSS properties as needed */
+}
+
 .header-github-link:before {
   font-family: "Font Awesome 5 Free"; 
   content: "\f09b"; 

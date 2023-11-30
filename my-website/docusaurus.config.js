@@ -69,7 +69,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       
       navbar: {
-        /*title: "Milind's Homage",
+        /*title: "Milind's Homepage",
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -127,6 +127,13 @@ const config = {
             
           },
           /*{to: '/blog', label: 'Blog', position: 'left'},*/
+
+          {
+            to: '/Notebooks_Courses/',
+            label: '📚',
+            position: 'right',
+            className: 'custom-notebook-nav',
+          },
           
           {
             to: 'https://github.com/milindv26',

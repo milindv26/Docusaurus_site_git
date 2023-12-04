@@ -3,6 +3,8 @@ sidebar_position: 2
 ---
 # Shapiro Wilk Test 
 [GitHub repository](https://github.com/milindv26/Shapiro_Wilk_Test)
+
+**In this Jupyter notebook, we're going to create a distribution chart for the W statistic, using a sample size of n, by employing Monte Carlo simulation methods. Subsequently, we will evaluate and contrast the outcomes of our self-generated W statistic against the results from the Shapiro test, which is a built-in feature of the Scipy library.**
 ## Introduction
 <div style={{ textAlign: 'justify' }}>
 The Shapiro-Wilk test is a widely used statistical procedure for testing the normality of a data set. Developed by Samuel Shapiro and Martin Wilk in 1965, this test is particularly effective for small sample sizes, typically considered to be less than 50. The test calculates a statistic, often denoted as W, which evaluates the degree to which a set of data conforms to a normal distribution.
@@ -21,7 +23,6 @@ Here's a brief overview of the test:
 
 Overall, the Shapiro-Wilk test is a fundamental tool in statistics for assessing the normality of data, providing an essential step in many analytical procedures.
 
-**In this Jupyter notebook, we're going to create a distribution chart for the W statistic, using a sample size of n, by employing Monte Carlo simulation methods. Subsequently, we will evaluate and contrast the outcomes of our self-generated W statistic against the results from the Shapiro test, which is a built-in feature of the Scipy library.**
 </div>
 
 ## W statistic
@@ -371,6 +372,7 @@ print(f"Accuracy of our test:{round((((our_p>0.05).sum())/iter)*100,2)} %\n")
 ```
 
     Accuracy of in-built test:92.24 %
+    
     Accuracy of our test:92.07 %
     
     

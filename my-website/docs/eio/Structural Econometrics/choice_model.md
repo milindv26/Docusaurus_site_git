@@ -3,7 +3,7 @@ sidebar_position: 4
 ---
 # Choice Probabilities
 
-### Role of Choice Probabilities
+## Role of Choice Probabilities
     *   Essential in modeling discrete choices.
     *   Cannot predict choices definitively from representative utility alone because of the unobserved component.
     *   Choice probabilities crucial in discrete choice models.

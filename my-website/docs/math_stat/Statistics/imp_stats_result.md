@@ -28,3 +28,75 @@ Cov(X, U) &= \mathbb{E}\left[(X - \mathbb{E}[X])(U - \mathbb{E}[U])\right] \\
 $$
 ---
 
+## Unbiased estimator of Variance
+
+Let the population variance and mean are $\sigma^2$ and $\mu$. The sample variance is given by:
+$$
+S^2=\frac{1}{n-1}\sum_{i=1}^n(X_i-\bar{X})^2
+$$
+To prove the unbiasedness of $S^2$ we have to prove that $\mathbb{E}[S^2]=\sigma^2$.
+$$
+S^2=\frac{1}{n-1}\sum_{i=1}^n(X_i^{2}+\bar{X}^2-2X_i\bar{X})
+$$
+Taking expectation both sides:
+$$
+\begin{align*}
+\mathbb{E}[S^2]&=\mathbb{E}\bigg[\frac{1}{n-1}\sum_{i=1}^n(X_i^{2}+\bar{X}^2-2X_i\bar{X})\bigg]\\
+&=\frac{1}{n-1}\mathbb{E}\bigg[\sum_{i=1}^n(X_i^{2})+\sum_{i=1}^n(\bar{X}^2)-2\bar{X}\sum_{i=1}^n(X_i)\bigg]\\
+&=\frac{1}{n-1}\mathbb{E}\bigg[\sum_{i=1}^n(X_i^{2})+n(\bar{X}^2)-2\bar{X}n(\bar{X})\bigg]\\
+&=\frac{1}{n-1}\mathbb{E}\bigg[\sum_{i=1}^n(X_i^{2})-n(\bar{X}^2)\bigg]\\
+&=\frac{1}{n-1}\bigg[\sum_{i=1}^n\mathbb{E}[X_i^{2}]-n\mathbb{E}[\bar{X}^2]\bigg]\text{ as }\mathbb{E}\text{ operator is linear.}
+\end{align*}
+$$
+We know that $Var[X_i]=\mathbb{E}[X_i^2] - (\mathbb{E}[X_i])^2$, that is $\sigma^2=\mathbb{E}[X_i^2] - \mu^2$, hence
+$$
+\begin{align*}
+\frac{1}{n-1}\bigg[\sum_{i=1}^n\mathbb{E}[X_i^{2}]-n\mathbb{E}[\bar{X}^2]\bigg]&=\frac{1}{n-1}\bigg[\sum_{i=1}^n(\sigma^2 + \mu^2)-n\mathbb{E}[\bar{X}^2]\bigg]\\
+&=\frac{1}{n-1}\bigg[n(\sigma^2 + \mu^2) - n\mathbb{E}[\bar{X}^2]\bigg]\\
+&=\frac{n}{n-1}\bigg[(\sigma^2 + \mu^2) - \mathbb{E}[\bar{X}^2]\bigg]
+\end{align*}
+$$
+Also, $Var[\bar{X}]=\mathbb{E}[\bar{X}^2]-(\mathbb{E}[\bar{X}])^2$, $\implies \mathbb{E}[\bar{X}^2]=Var[\bar{X}]+(\mathbb{E}[\bar{X}])^2$.
+
+Now
+* Consider $Var[\bar{X}]$,
+
+  *Note: $\bar{X}$ is a random variable*
+
+$$
+\begin{align*}
+Var[\bar{X}]&=Var\bigg[\frac{\sum_{i=1}^nX_i}{n}\bigg]\\
+&=\frac{1}{n^2}Var[\sum_{i=1}^nX_i]\\
+&=\frac{1}{n^2}\sum_{i=1}^nVar[X_i]\\
+&\text{( as }X_i \text{'s are  i.i.d)}\\
+&=\frac{n\sigma^2}{n^2}=\frac{\sigma^2}{n}
+\end{align*}
+$$
+
+* Consider $(\mathbb{E}[\bar{X}])^2$, 
+  
+$$
+\begin{align*}
+\mathbb{E}[\bar{X}]&=\mathbb{E}\bigg[\frac{\sum_{i=1}^n X_i}{n}\bigg]\\
+&=\frac{1}{n}\mathbb{E}[\sum_{i=1}^nX_i]\\
+&=\frac{1}{n}\sum_{i=1}^n \mathbb{E}[X_i]\\
+&=\frac{1}{n}\sum_{i=1}^n \mathbb{E}[X_i]\\
+&=\mu\\
+(\mathbb{E}[\bar{X}])^2&=\mu^2
+\end{align*}
+$$
+Finally, we have
+$$
+\begin{align*}
+\frac{n}{n-1}\bigg[(\sigma^2 + \mu^2) - \mathbb{E}[\bar{X}^2]\bigg]&=\frac{n}{n-1}\bigg[(\sigma^2 + \mu^2) - Var[\bar{X}]-(\mathbb{E}[\bar{X}])^2\bigg]\\
+&=\frac{n}{n-1}\bigg[(\sigma^2 + \mu^2) - \frac{\sigma^2}{n}-\mu^2\bigg]\\
+&=\frac{n}{n-1}\bigg[\frac{(n-1)\sigma^2}{n}\bigg]\\
+\mathbb{E}[S^2]&=\sigma^2 \qquad \qquad \blacksquare
+\end{align*}
+$$
+**Exercise:** Find $\mathbb{E}[S^2]$, where $S$ is given by:
+$$
+\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^2
+$$
+
+---

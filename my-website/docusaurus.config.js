@@ -88,7 +88,7 @@ const config = {
             sidebarId: 'jnbSidebar',
             label: "Jupyter Notebooks",
             position: 'left',
-            
+                      
           },
           {
             type: 'docSidebar',

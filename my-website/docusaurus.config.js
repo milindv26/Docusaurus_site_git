@@ -126,6 +126,14 @@ const config = {
             label: 'Frequent Commands',
             
           },
+
+          /*{
+            type: 'docSidebar',
+            sidebarId: 'testSidebar',
+            position: 'left',
+            label: 'Test',
+            
+          },*/
           /*{to: '/blog', label: 'Blog', position: 'left'},*/
 
           {

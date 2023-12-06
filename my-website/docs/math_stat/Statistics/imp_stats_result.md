@@ -4,6 +4,19 @@ sidebar_position: 1
 
 # Important results
 
+## Covariance properties
+
+$$
+\begin{align*}
+Cov(X, a) &= 0\\
+Cov(X, X) &= Var(X)\\
+Cov(X, Y) &= Cov(Y, X)\\
+Cov(aX, bY) &= ab \, Cov(X, Y)\\
+Cov(X + a, Y + b) &= Cov(X, Y)\\
+Cov(aX + bY, cW + dV) &= ac \, Cov(X, W) + ad \, Cov(X, V) + bc \, Cov(Y, W) + bd \, Cov(Y, V)
+\end{align*} 
+$$
+
 ## Mean independence and Covariance
 
 **Prove:** If $X$ and $U$ are mean independent and $\mathbb{E}[U]=0$ then $Cov(X,U)=0$.

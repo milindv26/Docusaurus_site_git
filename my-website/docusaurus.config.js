@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Welcome to my digital notebooks! 📚',
-  tagline: '',
+  tagline: 'Still under construction though 👷🏽🏗️🚧',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here

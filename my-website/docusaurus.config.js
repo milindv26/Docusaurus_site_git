@@ -84,6 +84,7 @@ const config = {
             className: 'custom-homepage-link', 
             
           },
+          
           { type: 'docSidebar',
             sidebarId: 'jnbSidebar',
             label: "Jupyter Notebooks",

@@ -84,6 +84,14 @@ const config = {
             className: 'custom-homepage-link', 
             
           },
+
+          {
+            to: '/Notebooks_Courses/',
+            label: '📚',
+            position: 'left',
+            className: 'custom-notebook-nav',
+          },
+
           
           { type: 'docSidebar',
             sidebarId: 'jnbSidebar',
@@ -137,12 +145,7 @@ const config = {
           },*/
           /*{to: '/blog', label: 'Blog', position: 'left'},*/
 
-          {
-            to: '/Notebooks_Courses/',
-            label: '📚',
-            position: 'right',
-            className: 'custom-notebook-nav',
-          },
+          
           
           {
             to: 'https://github.com/milindv26',

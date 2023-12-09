@@ -17,6 +17,8 @@ Cov(aX + bY, cW + dV) &= ac \, Cov(X, W) + ad \, Cov(X, V) + bc \, Cov(Y, W) + b
 \end{align*} 
 $$
 
+---
+
 ## Mean independence and Covariance
 
 **Prove:** If $X$ and $U$ are mean independent and $\mathbb{E}[U]=0$ then $Cov(X,U)=0$.

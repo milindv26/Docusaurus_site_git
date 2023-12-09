@@ -132,16 +132,16 @@ $$
 \end{align*}
 $$
 
-### Aside: Algebra
-
-Consider the following observations:
-
-* $n^x \cdot n^y = n^{(x+y)}$
-* $n^{x^2} \cdot n^{y^2} = n^{(x^2+y^2)}$
-* Let $g(x)=e^{kx^2}$
-$$
-\implies g(x)\cdot g(y)=e^{kx^2}\cdot e^{ky^2}=e^{k(x^2+y^2)}=g(\sqrt{x^2+y^2})
-$$
+>### Aside: Algebra
+>
+>Consider the following observations:
+>
+>* $n^x \cdot n^y = n^{(x+y)}$
+>* $n^{x^2} \cdot n^{y^2} = n^{(x^2+y^2)}$
+>* Let $g(x)=e^{kx^2}$
+>$$
+>\implies g(x)\cdot g(y)=e^{kx^2}\cdot e^{ky^2}=e^{k(x^2+y^2)}=g(\sqrt{x^2+y^2})
+>$$
 
 ### Main: Part 2
 
@@ -166,78 +166,78 @@ $$
 \int_{-\infty}^{\infty}\lambda e^{-m^2x^2} \cdot dx = \frac{\lambda}{m}\int_{-\infty}^{\infty} e^{-u^2} \cdot du =1
 $$
 
-### Aside: Tricky integral
-
-Integrate $\int_{-\infty}^{\infty} e^{-u^2} \cdot du$.
-
-We will use two ways to calculate above integral, analytical and numerical.
-
-#### Analytical
-
-Consider
-$$
-I=\int_{-\infty}^{\infty} e^{-u^2} \cdot du,
-$$
-then,
-$$
-I^2=\left(\int_{-\infty}^{\infty} e^{-x^2} \cdot dx\right)\cdot\left(\int_{-\infty}^{\infty} e^{-y^2} \cdot dy\right)
-$$
-In terms of $x$ and $y$, this can be expressed as a double integral over the entire plane:
-$$
-I^2=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-(x^2+y^2)} \cdot dx \cdot dy
-$$
-Switch from Cartesian coordinates $(x,y)$ to polar coordinates $(r,\theta)$. In polar coordinates, $x^2+y^2=r^2$ and $dx dy=r dr d\theta$.[[How?]](../math_stat/Mathematics/cartesian_to_polar.md) 
-
-The limits for $r$ will be from $0$ to $\infty$, and for $\theta$, from $0$ to $2\pi$.
-$$
-\implies I^2=\int_{0}^{2\pi} \int_{0}^{\infty} e^{-r^2} \cdot r \cdot dr \cdot d\theta
-$$
-
-* Step 1: Calculate $\int_{0}^{\infty} e^{-r^2} \cdot r \cdot dr$
-  Substitute $r^2=u$, we get $du=2rdr$ and :
-  $$
-  \frac{1}{2}\int_{0}^{\infty} e^{-u} \cdot du =\frac{1}{2}-e^{-u}\Bigr|_{0}^{\infty}=\frac{1}{2}[0-(-1)]=\frac{1}{2}
-  $$
-* Step 2: Calculate $I^2=\int_{0}^{2\pi} \frac{1}{2} \cdot d\theta:$
-  $$
-  I^2 = \frac{1}{2}\theta\Bigr|_{0}^{2\pi}=\pi
-  $$
-  $$
-  \implies I=\sqrt{\pi}
-  $$
-
-#### Numerical
-
-
-```python
-inf = float('inf')
-def f(u):
-    return (np.e)**(-(u**2))
-
-quad(f, -inf, inf)[0]
-```
-
-
-
-
-    1.772453850905516
-
-
-
-The above value is equal to $\sqrt{\pi}$.
-
-
-```python
-(np.pi)**(0.5)
-```
-
-
-
-
-    1.7724538509055159
-
-
-
+>### Aside: Tricky integral
+>
+>Integrate $\int_{-\infty}^{\infty} e^{-u^2} \cdot du$.
+>
+>We will use two ways to calculate above integral, analytical and numerical.
+>
+>#### Analytical
+>
+>Consider
+>$$
+>I=\int_{-\infty}^{\infty} e^{-u^2} \cdot du,
+>$$
+>then,
+>$$
+>I^2=\left(\int_{-\infty}^{\infty} e^{-x^2} \cdot dx\right)\cdot\left(\int_{-\infty}^{\infty} e^{-y^2} \cdot >dy\right)
+>$$
+>In terms of $x$ and $y$, this can be expressed as a double integral over the entire plane:
+>$$
+>I^2=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-(x^2+y^2)} \cdot dx \cdot dy
+>$$
+>Switch from Cartesian coordinates $(x,y)$ to polar coordinates $(r,\theta)$. In polar coordinates, $x^2+y^2=r^2$ >and $dx dy=r dr d\theta$.[[How?]](../math_stat/Mathematics/cartesian_to_polar.md) 
+>
+>The limits for $r$ will be from $0$ to $\infty$, and for $\theta$, from $0$ to $2\pi$.
+>$$
+>\implies I^2=\int_{0}^{2\pi} \int_{0}^{\infty} e^{-r^2} \cdot r \cdot dr \cdot d\theta
+>$$
+>
+>* Step 1: Calculate $\int_{0}^{\infty} e^{-r^2} \cdot r \cdot dr$
+>  Substitute $r^2=u$, we get $du=2rdr$ and :
+>  $$
+>  \frac{1}{2}\int_{0}^{\infty} e^{-u} \cdot du =\frac{1}{2}-e^{-u}\Bigr|_{0}^{\infty}=\frac{1}{2}[0-(-1)]=\frac{1}{2}
+>  $$
+>* Step 2: Calculate $I^2=\int_{0}^{2\pi} \frac{1}{2} \cdot d\theta:$
+>  $$
+>  I^2 = \frac{1}{2}\theta\Bigr|_{0}^{2\pi}=\pi
+>  $$
+>  $$
+>  \implies I=\sqrt{\pi}
+>  $$
+>
+>#### Numerical
+>
+>
+>```python
+>inf = float('inf')
+>def f(u):
+>    return (np.e)**(-(u**2))
+>
+>quad(f, -inf, inf)[0]
+>```
+>
+>
+>
+>
+>    1.772453850905516
+>
+>
+>
+>The above value is equal to $\sqrt{\pi}$.
+>
+>
+>```python
+>(np.pi)**(0.5)
+>```
+>
+>
+>
+>
+>    1.7724538509055159
+>
+>
+>
 ### Main: Part 3
 
 We had

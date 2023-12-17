@@ -9,6 +9,7 @@ These notes are taken from YouTube video lectures by [Matt Woerman.](https://www
 
 ### Definition
 - Structural econometrics is defined as combining explicit economic theories with statistical models to identify parameters of economic models based on individual choices or aggregate relations.
+- Structural econometrics is a branch of economics that combines economic theory, statistical methods, and empirical analysis to model and understand the underlying structures of economic systems. It aims to uncover the relationships between different economic variables by developing and estimating models based on economic theory.
 
 ### Contrast with Nonstructural (reduced form) Econometrics
 Reduced form econometrics emphasises on:

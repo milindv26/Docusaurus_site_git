@@ -115,3 +115,4 @@ $$
 $$
 
 ---
+## Law of Total Probability

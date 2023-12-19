@@ -28,6 +28,13 @@ jupyter nbconvert --to markdown notebook.ipynb
 ```
 <div style={{ textAlign: 'justify' }}>
 ```
+* Justify center image in markdown
+```
+<div style={{ textAlign: 'center' }}>
+    <img src={require('./assets/2r.png').default} alt="Fig. 2"/>
+    <p style={{ marginTop: '1px' }}>Title</p>
+</div>
+```
 * Git remote repository url:
 ```
 git remote -v

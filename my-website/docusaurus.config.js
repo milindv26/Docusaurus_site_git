@@ -130,11 +130,20 @@ const config = {
 
           {
             type: 'docSidebar',
+            sidebarId: 'cryptoSidebar',
+            position: 'left',
+            label: 'Cryptography',
+            
+          },
+
+          {
+            type: 'docSidebar',
             sidebarId: 'fqcmdSidebar',
             position: 'left',
             label: 'Frequent Commands',
             
           },
+
 
           /*{
             type: 'docSidebar',

@@ -122,6 +122,14 @@ const config = {
 
           {
             type: 'docSidebar',
+            sidebarId: 'linearalgebraSidebar',
+            position: 'left',
+            label: 'Linear Algebra',
+            
+          },
+
+          {
+            type: 'docSidebar',
             sidebarId: 'math_statSidebar',
             position: 'left',
             label: 'Maths/Stats',

@@ -115,4 +115,25 @@ $$
 $$
 
 ---
+
+## Law of Iterated Expectations
+
+### Discrete case
+
+Under discrete case, Expectation is defined as follows
+$$
+\mathbb{E}[X]=x_1p_1+x_2p_2+...+x_np_n=\sum_{i=1}^n x_ip_i,
+$$
+can also be written as
+$$
+\mathbb{E}[X]=\sum_{i=1}^n (X=x_i)P(X=x_i),
+$$
+where random variable $X$ can take values $\{x_1,x_2,...,x_n\}$ with probabilities $\{p_1,p_2,...,p_n\}$ respectively.  
+
+The Law of Iterated Expectations (LIE) states that:
+$$
+\mathbb{E}[X]=\mathbb{E}[\mathbb{E}[X|Y]]
+$$
+
+---
 ## Law of Total Probability

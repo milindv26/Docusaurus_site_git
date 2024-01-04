@@ -22,3 +22,9 @@ $$
 &=\boldsymbol{\beta}+\text{plim }\{\bold{(X'X)^{-1}}\}\text{ plim }\{\bold{X'}\boldsymbol{\varepsilon}\}\\
 \end{align*}
 $$
+multiplying and dividing by N, we get
+$$
+\begin{align*}
+\text{plim }\bold{b}&=\boldsymbol{\beta}+\text{plim }\{\Big(\frac{\bold{X'X}}{N}\Big)^{-1}\}\text{ plim }\{\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}\}\\
+\end{align*}
+$$

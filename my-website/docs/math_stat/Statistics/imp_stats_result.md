@@ -26,6 +26,7 @@ $$
 *Note:* Mean independence is defined as $\mathbb{E}[U∣X]=\mathbb{E}[U]$.
 
 **Proof:**
+
 $$
 \begin{align*}
 Cov(X, U) &= \mathbb{E}\left[(X - \mathbb{E}[X])(U - \mathbb{E}[U])\right] \\
@@ -41,6 +42,7 @@ Cov(X, U) &= \mathbb{E}\left[(X - \mathbb{E}[X])(U - \mathbb{E}[U])\right] \\
 &= 0
 \end{align*}
 $$
+
 ---
 
 ## Unbiased estimator of Variance
@@ -115,4 +117,17 @@ $$
 $$
 
 ---
+## Q is positive definite
+
+**Prove:** 
+
+If $\bold{X}_{N\times k}$ has full column rank, then $\bold{Q:=}\frac{1}{N}\bold{(X'X)}$ is a positive
+definite matrix.
+
+**Proof:**
+
+We know that $\text{rank}\bold{(A)}\leq \text{min(number of rows, number of columns)}$. This implies, given $\bold{X}_{N\times k}$ has full column rank, $N\geq k$.
+
+---
+
 ## Law of Total Probability

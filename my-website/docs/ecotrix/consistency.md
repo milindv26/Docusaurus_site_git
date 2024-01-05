@@ -42,8 +42,14 @@ $$
     \vdots & \ddots & \vdots \\
     x_{1N} & \cdots & x_{kN}
     \end{bmatrix}_{N\times k}=
+    \begin{bmatrix}
+    \langle C_1,C_1 \rangle & \langle C_1,C_2 \rangle & \cdots & \langle C_1,C_k \rangle \\
+    \vdots& \vdots & \ddots & \vdots \\
+    \langle C_k,C_1 \rangle &\langle C_k,C_2 \rangle& \cdots & \langle C_k,C_k \rangle
+    \end{bmatrix}_{k\times k}
 \end{align*}
 $$
+where $\langle C_i,C_j \rangle$ is the inner product of column $i$ and column $j$ of matrix $\bold{X}.$
 
 Now let's analyze $\text{term 2}$
 $$

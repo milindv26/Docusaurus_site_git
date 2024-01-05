@@ -28,7 +28,24 @@ $$
 \text{plim }\bold{b}&=\boldsymbol{\beta}+\underbrace{\text{plim }\{\Big(\frac{\bold{X'X}}{N}\Big)^{-1}\}}_{\text{term 1}}\underbrace{\text{ plim }\{\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}\}}_{\text{term 2}}.\\
 \end{align*}
 $$
-Let's analyze $\text{term 2}$ first
+Let's analyze $\text{term 1}$ first
+$$
+\begin{align*}
+    \bold{X'X}=
+    \begin{bmatrix}
+    x_{11} & \cdots & x_{1N} \\
+    \vdots & \ddots & \vdots \\
+    x_{k1} & \cdots & x_{kN}
+    \end{bmatrix}_{k\times N}
+    \begin{bmatrix}
+    x_{11} & \cdots & x_{k1} \\
+    \vdots & \ddots & \vdots \\
+    x_{1N} & \cdots & x_{kN}
+    \end{bmatrix}_{N\times k}=
+\end{align*}
+$$
+
+Now let's analyze $\text{term 2}$
 $$
 \begin{align*}
     \frac{\bold{X'}\boldsymbol{\varepsilon}}{N}=\frac{1}{N}
@@ -91,4 +108,3 @@ $$
     \text{plim }\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}=0.
 \end{align*}
 $$
-Now let's analyze $\text{term 1}$

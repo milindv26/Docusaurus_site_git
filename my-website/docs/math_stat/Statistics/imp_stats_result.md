@@ -121,10 +121,25 @@ $$
 
 **Prove:** 
 
-If $\bold{X}_{N\times k}$ has full column rank, then $\bold{Q:=}\frac{1}{N}\bold{(X'X)}$ is a positive
-definite matrix.
+If $\bold{X}_{N\times k}$ has full column rank, then $\bold{Q:=}\frac{1}{N}\bold{(X'X)}$ is a positive definite matrix.
+
+A matrix $\bold{A}$ is positive definite if for all non-zero vector $v_{k\times 1}$, the quadratic form $\bold{v′Av}$ is positive.
 
 **Proof:**
+
+We have to show
+
+$$
+\bold{v'}\frac{\bold{(X'X)}}{N}\bold{v}>0.
+$$
+Above inequality can be written as
+$$
+\begin{align*}
+    \frac{1}{N}\bold{v'X'Xv}&>0\\
+    \frac{1}{N}\bold{(Xv)'Xv}&>0\\
+\end{align*}
+$$
+Since $\bold{(Xv)}$ is vector of dimension $N \times 1$, $\bold{(Xv)'Xv}$ is the inner product of $\bold{(Xv)}$ with itself, which is always non-negative by the definition of inner product.
 
 We know that $\text{rank}\bold{(A)}\leq \text{min(number of rows, number of columns)}$. This implies, given $\bold{X}_{N\times k}$ has full column rank, $N\geq k$.
 

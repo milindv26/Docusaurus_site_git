@@ -66,6 +66,10 @@ jupyter nbconvert --to markdown notebook.ipynb
     </table>
 </div>
 ```
+* Rectangular box in markdown
+```
+<div style={{ border: '1px solid black', padding: '10px', textAlign:'justify' }}>
+```
 * Git remote repository url:
 ```
 git remote -v

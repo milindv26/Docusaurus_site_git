@@ -145,20 +145,20 @@ $$
     \mathbb{E}[\bold{x_i}\varepsilon_i]&=\mathbb{E}_{\bold{X}}[\mathbb{E}[\bold{x_i}\varepsilon_i|\bold{X}]]\\
     &=\mathbb{E}_{\bold{X}}[\bold{x_i}\mathbb{E}[\varepsilon_i|\bold{X}]]\\
     &=\mathbb{E}_{\bold{X}}[\bold{x_i}0]\\
-    &=0.
+    &=\bold{0}.
 \end{align*}
 $$
 This implies
 $$
 \begin{align*}
-    \text{plim }\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}=0.\tag{2}
+    \text{plim }\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}=\bold{0}.\tag{2}
 \end{align*}
 $$
 
 Using $(1)$ and $(2)$
 $$
 \begin{align*}
-\text{plim }\bold{b}&=\boldsymbol{\beta}+\underbrace{\text{plim }\{\Big(\frac{\bold{X'X}}{N}\Big)^{-1}\}}_{\bold{\tilde{Q}^{-1}}}\underbrace{\text{ plim }\{\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}\}}_{0}.\\
+\text{plim }\bold{b}&=\boldsymbol{\beta}+\underbrace{\text{plim }\{\Big(\frac{\bold{X'X}}{N}\Big)^{-1}\}}_{\bold{\tilde{Q}^{-1}}}\underbrace{\text{ plim }\{\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}\}}_{\bold{0}}.\\
 &=\boldsymbol{\beta}.\hspace{20px}\blacksquare
 \end{align*}
 $$

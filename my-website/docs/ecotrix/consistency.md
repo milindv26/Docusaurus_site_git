@@ -31,7 +31,8 @@ $$
 Let's analyze $\text{term 1}$ first
 $$
 \begin{align*}
-    \bold{X'X}=
+    \frac{1}{N}\bold{X'X}=
+    \frac{1}{N}
     \begin{bmatrix}
     x_{11} & \cdots & x_{1N} \\
     \vdots & \ddots & \vdots \\
@@ -42,6 +43,7 @@ $$
     \vdots & \ddots & \vdots \\
     x_{1N} & \cdots & x_{kN}
     \end{bmatrix}_{N\times k}=
+    \frac{1}{N}
     \begin{bmatrix}
     \langle C_1,C_1 \rangle & \langle C_1,C_2 \rangle & \cdots & \langle C_1,C_k \rangle \\
     \vdots& \vdots & \ddots & \vdots \\
@@ -49,8 +51,46 @@ $$
     \end{bmatrix}_{k\times k}
 \end{align*}
 $$
-where $\langle C_i,C_j \rangle$ is the inner product of column $i$ and column $j$ of matrix $\bold{X}.$
+where $\langle C_m,C_m \rangle$ is the inner product of column $m$ and column $n$ of matrix $\bold{X}.$ Therefore
+$$
+\begin{align*}
+    \frac{1}{N}\langle C_1,C_1 \rangle&=\frac{1}{N}\sum_{i=1}^Nx_{1i}^2\text{ and }\\
+    \frac{1}{N}\langle C_m,C_n \rangle&=\frac{1}{N}\sum_{i=1}^Nx_{mi}x_{ni}.\\
+\end{align*}
+$$
+Applying Weak Law of Large Numbers
+$$
+\begin{align*}
+    \text{plim }\Big(\frac{1}{N}\bold{X'X}\Big)&=\text{plim }\Bigg(
+    \frac{1}{N}
+    \begin{bmatrix}
+    \langle C_1,C_1 \rangle & \langle C_1,C_2 \rangle & \cdots & \langle C_1,C_k \rangle \\
+    \vdots& \vdots & \ddots & \vdots \\
+    \langle C_k,C_1 \rangle &\langle C_k,C_2 \rangle& \cdots & \langle C_k,C_k \rangle
+    \end{bmatrix}_{k\times k}\Bigg)\\
+    &=\mathbb{E}
+    \begin{bmatrix}
+    C_1^2 & C_1\cdot C_2 & \cdots & C_1\cdot C_k \\
+    \vdots& \vdots & \ddots & \vdots \\
+    C_k\cdot C_1 &C_k\cdot C_2& \cdots & C_k^2
+    \end{bmatrix}_{k\times k}\\
+    &=\mathbb{E}[\bold{x_i}\bold{x_i'}].
+\end{align*}
+$$
+We know that $\frac{\bold{X'X}}{N}$ is a positive definite matrix. Let's assume that
+$$
+\begin{align*}
+    \text{plim }\Big(\frac{1}{N}\bold{X'X}\Big)&=\bold{\tilde{Q}}\text{, a positive definite matrix}
+\end{align*}
+$$
+Since $\bold{\tilde{Q}}$ is a positive definite matrix, it's inverse exists.
 
+Using plim property
+$$
+\begin{align*}
+    \text{plim }\Big(\frac{1}{N}\bold{X'X}\Big)^{-1}&=\Big\{\text{plim }\Big(\frac{1}{N}\bold{X'X}\Big)\Big\}^{-1}=\bold{\tilde{Q}^{-1}}.\tag{1}
+\end{align*}
+$$
 Now let's analyze $\text{term 2}$
 $$
 \begin{align*}
@@ -111,6 +151,14 @@ $$
 This implies
 $$
 \begin{align*}
-    \text{plim }\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}=0.
+    \text{plim }\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}=0.\tag{2}
+\end{align*}
+$$
+
+Using $(1)$ and $(2)$
+$$
+\begin{align*}
+\text{plim }\bold{b}&=\boldsymbol{\beta}+\underbrace{\text{plim }\{\Big(\frac{\bold{X'X}}{N}\Big)^{-1}\}}_{\bold{\tilde{Q}^{-1}}}\underbrace{\text{ plim }\{\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}\}}_{0}.\\
+&=\boldsymbol{\beta}.\hspace{20px}\blacksquare
 \end{align*}
 $$

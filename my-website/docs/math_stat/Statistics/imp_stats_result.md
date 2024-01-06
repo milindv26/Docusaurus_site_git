@@ -146,7 +146,7 @@ If $\bold{X}$ has full column rank, then the equation $\bold{Xv}=\bold{0}$ only 
 Hence
 $$
 \begin{align*}
-    \frac{1}{N}\bold{(Xv)'Xv}&>0.\hspace{20px}\blacksquare\\
+    \frac{1}{N}\bold{v'(X'X)v}&>0.\hspace{20px}\blacksquare\\
 \end{align*}
 $$
 

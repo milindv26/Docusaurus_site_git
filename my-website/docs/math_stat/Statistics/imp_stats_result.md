@@ -139,9 +139,16 @@ $$
     \frac{1}{N}\bold{(Xv)'Xv}&>0\\
 \end{align*}
 $$
-Since $\bold{(Xv)}$ is vector of dimension $N \times 1$, $\bold{(Xv)'Xv}$ is the inner product of $\bold{(Xv)}$ with itself, which is always non-negative by the definition of inner product.
+Since $\bold{(Xv)}$ is vector of dimension $N \times 1$, $\bold{(Xv)'Xv}$ is the inner product of $\bold{(Xv)}$ with itself, which is always non-negative $(\geq)$ by the definition of inner product.
 
-We know that $\text{rank}\bold{(A)}\leq \text{min(number of rows, number of columns)}$. This implies, given $\bold{X}_{N\times k}$ has full column rank, $N\geq k$.
+If $\bold{X}$ has full column rank, then the equation $\bold{Xv}=\bold{0}$ only holds true if $\bold{v=0}$. Therefore $\bold{Xv}\neq\bold{0}$ for $\bold{v\neq0}$.
+
+Hence
+$$
+\begin{align*}
+    \frac{1}{N}\bold{(Xv)'Xv}&>0.\hspace{20px}\blacksquare\\
+\end{align*}
+$$
 
 ---
 

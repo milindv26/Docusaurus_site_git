@@ -15,7 +15,7 @@ $$
     &=\text{plim }\Big\{\frac{N}{(N-K)}\Big[\frac{\boldsymbol{\varepsilon'\varepsilon}}{N}-\Big(\frac{\boldsymbol{\varepsilon'}\bold{X}}{N}\Big)\Big(\frac{\bold{X'X}}{N}\Big)^{-1}\Big(\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}\Big)\Big]\Big\}\\
     &=\text{plim }\Big(\frac{N}{N-K}\Big)\text{ plim }\Big(\frac{\boldsymbol{\varepsilon'\varepsilon}}{N}-\Big(\frac{\boldsymbol{\varepsilon'}\bold{X}}{N}\Big)\Big(\frac{\bold{X'X}}{N}\Big)^{-1}\Big(\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}\Big)\Big)\\
     &=1\cdot\text{ plim }\Big(\frac{\boldsymbol{\varepsilon'\varepsilon}}{N}-\Big(\frac{\boldsymbol{\varepsilon'}\bold{X}}{N}\Big)\Big(\frac{\bold{X'X}}{N}\Big)^{-1}\Big(\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}\Big)\Big)\\
-    &=\text{plim }\Big(\frac{\boldsymbol{\varepsilon'\varepsilon}}{N}\Big)-\Big[\text{ plim }\Big(\frac{\boldsymbol{\varepsilon'}\bold{X}}{N}\Big)\underbrace{\text{ plim }\Big(\frac{\bold{X'X}}{N}\Big)^{-1}}_{\bold{\tilde{Q}^{-1}}}\underbrace{\text{ plim }\Big(\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}\Big)}_{=\bold{0}}\Big]\\
+    &=\text{plim }\Big(\frac{\boldsymbol{\varepsilon'\varepsilon}}{N}\Big)-\Big[\text{ plim }\Big(\frac{\boldsymbol{\varepsilon'}\bold{X}}{N}\Big)\underbrace{\text{ plim }\Big(\frac{\bold{X'X}}{N}\Big)^{-1}}_{\bold{\tilde{Q}^{-1}}}\underbrace{\text{ plim }\Big(\frac{\bold{X'}\boldsymbol{\varepsilon}}{N}\Big)}_{=\bold{0}}\Big].\\
     \text{ plim }\Big(\frac{\boldsymbol{\varepsilon'}\bold{X}}{N}\Big)
     &=\text{plim}\Big(\frac{1}{N}
     \begin{bmatrix}
@@ -33,6 +33,10 @@ $$
 Hence
 $$
 \begin{align*}
-    \text{plim }\hat{\sigma}^2&=\text{plim }\Big(\frac{\boldsymbol{\varepsilon'\varepsilon}}{N}\Big)
+    \text{plim }\hat{\sigma}^2&=\text{plim }\Big(\frac{\boldsymbol{\varepsilon'\varepsilon}}{N}\Big)\\
+    &=\text{plim }\Big(\frac{1}{N}\sum_{i=1}^N\varepsilon_i^2\Big)\\
+    &=\mathbb{E}[\varepsilon_i^2]\\
+    &=\sigma^2
 \end{align*}
 $$
+**Ques:** Find $\text{plim }\mathbb{Var}\bold{(b|X)}.$

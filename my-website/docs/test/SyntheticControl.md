@@ -81,7 +81,9 @@ The data we analyze is comprised of observations from $J + 1$ units, labeled as 
 
 Our dataset encompasses observations over $T$ time periods, with the initial $T_0$ periods occurring before the implementation of the policy intervention. For each unit $j$ during each time period $t$, we record the outcome variable of interest, denoted by $Y_{jt}$. In addition to the outcomes, we collect data on $k$ predictors for each unit, represented as $X_{1j}, ..., X_{kj}$. These predictors might include values of the outcome variable prior to the intervention and are not influenced by the intervention itself. The predictors for all untreated units are compiled into a matrix $\bold{X_0}$ of size $k \times J$, where each column corresponds to a unit $j$ and contains the predictor values for that unit.
 
-To estimate the intervention's effect, we consider the potential outcomes for unit $j = 1$, which is the treated unit, in the absence of the intervention, labeled as $Y{t}^{N}$​, and the actual observed outcomes post-intervention, labeled as $Y_{t}^{I}$​, for time periods $t > T_0$. The difference in these potential and observed outcomes for the treated unit, for any given period after the intervention, defines the effect of the intervention, denoted by $\tau_t$​, which is mathematically expressed as the difference
+To estimate the intervention's effect, we consider the potential outcomes for unit $j = 1$, which is the treated unit, in the absence of the intervention, labeled as $Y_{t}^{N}$​, and the actual observed outcomes post-intervention, labeled as $Y_{t}^{I}$​, for time periods $t > T_0$. The difference in these potential and observed outcomes for the treated unit, for any given period after the intervention, defines the effect of the intervention, denoted by $\tau_t$​, which is mathematically expressed as the difference
 $$
-Y_{t}^{I} - Y_{t}^{N}
+Y_{t}^{I} - Y_{t}^{N}.
 $$
+
+For $t>T_0$, $Y_{t}^{N}$ is not observed since it is the counterfactual therefore to estimate the effect of policy intervention we have to estimate $Y_{t}^{N}$.

@@ -41,7 +41,7 @@ However, the effectiveness of SCM depends on careful implementation. The selecti
 In this comprehensive review paper, we will embark on a threefold exploration of the synthetic control method. Initially, our focus will be on delving into the pertinent literature surrounding this method. This foundational segment aims to encapsulate the historical context, key developments, and the broader academic discourse that has shaped and defined the synthetic control method over time. Following this, we will transition to a detailed exposition of the method itself. This will encompass a thorough examination of its underlying principles and operational mechanics. The objective here is to offer a lucid and nuanced understanding of how the synthetic control method functions and its significance in empirical research. Finally, the paper will culminate with a critical analysis of the method, highlighting notable critiques that have emerged in scholarly circles. In addressing these criticisms, we will not only engage in a discussion of their validity but also propose potential pathways and methodological refinements that could mitigate these concerns, thereby enhancing the robustness and applicability of the synthetic control method. This holistic approach ensures a comprehensive understanding of the method, its impact, and its evolving landscape within the realms of social science research.
 </div>
 
-### Literature Review: The Synthetic Control Method in Policy Evaluation
+## Literature Review: The Synthetic Control Method in Policy Evaluation
 
 #### Introduction
 The synthetic control method, a significant innovation in policy evaluation, has gained substantial attention in the field of econometrics. As highlighted by Susan Athey and Guido Imbens in their survey for the Journal of Economic Perspectives, this method is "arguably the most important innovation in the policy evaluation literature in the last 15 years" (Athey and Imbens, 2017). This literature review aims to provide a comprehensive overview of the development, application, and impact of the synthetic control method in various fields.
@@ -70,3 +70,18 @@ Comparative case studies, traditionally used to evaluate large-scale events or i
 
 #### Conclusion
 In summary, the synthetic control method represents a significant breakthrough in the field of policy evaluation, offering a robust and versatile tool for assessing the impacts of large-scale interventions. Its applications across a variety of domains, from economics to social sciences, and its adoption beyond academia, underscore its importance and effectiveness. While it is not without limitations and continues to evolve, the synthetic control method remains a key component in the toolkit of researchers and policymakers alike, providing insights and evidence in the complex world of policy analysis and evaluation.
+
+## The Method
+
+This section describes the principles and operational mechanics of the SCM.
+
+### The Setting
+
+The data we analyze is comprised of observations from $J + 1$ units, labeled as $j = 1, 2, ..., J + 1$. We proceed under the assumption that the first unit $(j = 1)$ has received the treatment or has been subject to the policy intervention being studied. The remaining units, from $j = 2$ to $J + 1$, constitute what is referred to as the "donor pool", which consists of units that have not been treated and therefore serve as potential comparisons. 
+
+Our dataset encompasses observations over $T$ time periods, with the initial $T_0$ periods occurring before the implementation of the policy intervention. For each unit $j$ during each time period $t$, we record the outcome variable of interest, denoted by $Y_{jt}$. In addition to the outcomes, we collect data on $k$ predictors for each unit, represented as $X_{1j}, ..., X_{kj}$. These predictors might include values of the outcome variable prior to the intervention and are not influenced by the intervention itself. The predictors for all untreated units are compiled into a matrix $\bold{X_0}$ of size $k \times J$, where each column corresponds to a unit $j$ and contains the predictor values for that unit.
+
+To estimate the intervention's effect, we consider the potential outcomes for unit $j = 1$, which is the treated unit, in the absence of the intervention, labeled as $Y{t}^{N}$​, and the actual observed outcomes post-intervention, labeled as $Y_{t}^{I}$​, for time periods $t > T_0$. The difference in these potential and observed outcomes for the treated unit, for any given period after the intervention, defines the effect of the intervention, denoted by $\tau_t$​, which is mathematically expressed as the difference
+$$
+Y_{t}^{I} - Y_{t}^{N}
+$$

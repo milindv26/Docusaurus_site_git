@@ -86,4 +86,4 @@ $$
 Y_{t}^{I} - Y_{t}^{N}.
 $$
 
-For $t>T_0$, $Y_{t}^{N}$ is not observed since it is the counterfactual therefore to estimate the effect of policy intervention we have to estimate $Y_{t}^{N}$.
+When considering periods beyond $T_0$, we are unable to observe $Y_t^N$, the counter-factual outcome that would prevail without the intervention. To discern the true effect of the policy intervention, it is essential to construct an estimation of this unobserved $Y_t^N$.

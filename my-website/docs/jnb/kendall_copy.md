@@ -1,0 +1,121 @@
+---
+sidebar_position: 800
+---
+# Kendall Tau Distance
+
+**In this Jupyter notebook, we will calculate the Kendall $\boldsymbol{\tau}$ distance for a slightly complex scenario described below.**
+
+## Scenario
+Suppose there are two individuals, A and B. Each person needs to rank their top 5 favorite fruits from a list of 11 fruits. How can we calculate the Kendall $\boldsymbol{\tau}$ distance in this case?
+
+**Procedure:** To calculate Kendall's Tau for two persons, A and B, who have ranked their 5 most favorite fruits out of a list of 11 fruits, follow these steps:
+
+1. **Construct the rankings:** Create two rankings for the 5 fruits each person has ranked. Since not all 11 fruits are ranked by each person, you will have partial rankings. You need to handle the unranked fruits by assigning them a lower rank or ignoring them in the comparison.
+
+2. **Extend the rankings:** For simplicity, extend the rankings to include all 11 fruits. Assign a rank of 6 (or any consistent low rank) to the unranked fruits.
+
+3. **Create pairs:** Form pairs of the fruits for comparison. Since there are 11 fruits, you'll form ${11\choose 2} = 55$ pairs.
+
+4. **Count concordant and discordant pairs:**   
+   * A pair $(i,j)$ is concordant if the ranking order of the fruits is the same for both persons. That is, if fruit $i$ is ranked higher than fruit $j$ by both A and B or lower by both A and B.
+   * A pair $(i,j)$ is discordant if the ranking order of the fruits is different for the two persons. That is, if fruit $i$ is ranked higher than fruit $j$ by one person but lower by the other.
+
+5. **Calculate Kendall's Tau:**
+$$
+\tau = \frac{C - D}{\binom{11}{2}}
+$$
+where $C$ is the number of concordant pairs, $D$ is the number of discordant pairs, and $n$ is the number of pairs (which is 55 in this case).
+
+## Example
+
+Suppose the list of 11 fruits is: [Apple, Banana, Cherry, Date, Elderberry, Fig, Grape, Honeydew, Kiwi, Lemon, Mango].
+
+Person A ranks: Apple (1), Banana (2), Cherry (3), Date (4), Elderberry (5)  
+Person B ranks: Apple (1), Banana (2), Grape (3), Kiwi (4), Lemon (5)
+
+**Step 1:** Construct the rankings:
+
+| Fruit       | A | B |
+|-------------|---|---|
+| Apple       | 1 | 1 |
+| Banana      | 2 | 2 |
+| Cherry      | 3 | 6 |
+| Date        | 4 | 6 |
+| Elderberry  | 5 | 6 |
+| Fig         | 6 | 6 |
+| Grape       | 6 | 3 |
+| Honeydew    | 6 | 6 |
+| Kiwi        | 6 | 4 |
+| Lemon       | 6 | 5 |
+| Mango       | 6 | 6 |
+
+**Step 2:** Form pairs and count concordant and discordant pairs:
+
+| Pair                  | A's Rank (i, j) | B's Rank (i, j) | Concordant/Discordant |
+|-----------------------|------------------|------------------|------------------------|
+| (Apple, Banana)       | (1, 2)           | (1, 2)           | Concordant             |
+| (Apple, Cherry)       | (1, 3)           | (1, 6)           | Concordant             |
+| (Apple, Date)         | (1, 4)           | (1, 6)           | Concordant             |
+| (Apple, Elderberry)   | (1, 5)           | (1, 6)           | Concordant             |
+| (Apple, Fig)          | (1, 6)           | (1, 6)           | Concordant             |
+| (Apple, Grape)        | (1, 6)           | (1, 3)           | Concordant             |
+| (Apple, Honeydew)     | (1, 6)           | (1, 6)           | Concordant             |
+| (Apple, Kiwi)         | (1, 6)           | (1, 4)           | Concordant             |
+| (Apple, Lemon)        | (1, 6)           | (1, 5)           | Concordant             |
+| (Apple, Mango)        | (1, 6)           | (1, 6)           | Concordant             |
+| (Banana, Cherry)      | (2, 3)           | (2, 6)           | Concordant             |
+| (Banana, Date)        | (2, 4)           | (2, 6)           | Concordant             |
+| (Banana, Elderberry)  | (2, 5)          | (2, 6)           | Concordant             |
+| (Banana, Fig)         | (2, 6)           | (2, 6)           | Concordant             |
+| (Banana, Grape)       | (2, 6)           | (2, 3)           | Concordant             |
+| (Banana, Honeydew)    | (2, 6)           | (2, 6)           | Concordant             |
+| (Banana, Kiwi)        | (2, 6)           | (2, 4)           | Concordant             |
+| (Banana, Lemon)       | (2, 6)           | (2, 5)           | Concordant             |
+| (Banana, Mango)       | (2, 6)           | (2, 6)           | Concordant             |
+| (Cherry, Date)        | (3, 4)           | (6, 6)           | Concordant             |
+| (Cherry, Elderberry)  | (3, 5)          | (6, 6)           | Concordant             |
+| (Cherry, Fig)         | (3, 6)           | (6, 6)           | Concordant             |
+| (Cherry, Grape)       | (3, 6)           | (6, 3)           | Discordant             |
+| (Cherry, Honeydew)    | (3, 6)           | (6, 6)           | Concordant             |
+| (Cherry, Kiwi)        | (3, 6)           | (6, 4)           | Discordant             |
+| (Cherry, Lemon)       | (3, 6)           | (6, 5)           | Discordant             |
+| (Cherry, Mango)       | (3, 6)           | (6, 6)           | Concordant             |
+| (Date, Elderberry)    | (4, 5)           | (6, 6)           | Concordant             |
+| (Date, Fig)           | (4, 6)           | (6, 6)           | Concordant             |
+| (Date, Grape)         | (4, 6)           | (6, 3)           | Discordant             |
+| (Date, Honeydew)      | (4, 6)           | (6, 6)           | Concordant             |
+| (Date, Kiwi)          | (4, 6)           | (6, 4)           | Discordant             |
+| (Date, Lemon)         | (4, 6)           | (6, 5)           | Discordant             |
+| (Date, Mango)         | (4, 6)           | (6, 6)           | Concordant             |
+| (Elderberry, Fig)     | (5, 6)           | (6, 6)           | Concordant             |
+| (Elderberry, Grape)   | (5, 6)           | (6, 3)           | Discordant             |
+| (Elderberry, Honeydew)| (5, 6)        | (6, 6)           | Concordant             |
+| (Elderberry, Kiwi)    | (5, 6)           | (6, 4)           | Discordant             |
+| (Elderberry, Lemon)   | (5, 6)           | (6, 5)           | Discordant             |
+| (Elderberry, Mango)   | (5, 6)           | (6, 6)           | Concordant             |
+| (Fig, Grape)          | (6, 6)           | (6, 3)           | Concordant             |
+| (Fig, Honeydew)       | (6, 6)           | (6, 6)           | Concordant             |
+| (Fig, Kiwi)           | (6, 6)           | (6, 4)           | Concordant             |
+| (Fig, Lemon)          | (6, 6)           | (6, 5)           | Concordant             |
+| (Fig, Mango)          | (6, 6)           | (6, 6)           | Concordant             |
+| (Grape, Honeydew)     | (6, 6)           | (3, 6)           | Discordant             |
+| (Grape, Kiwi)         | (6, 6)           | (3, 4)           | Discordant             |
+| (Grape, Lemon)        | (6, 6)           | (3, 5)           | Discordant             |
+| (Grape, Mango)        | (6, 6)           | (3, 6)           | Discordant             |
+| (Honeydew, Kiwi)      | (6, 6)           | (6, 4)           | Concordant             |
+| (Honeydew, Lemon)     | (6, 6)           | (6, 5)           | Concordant             |
+| (Honeydew, Mango)     | (6, 6)           | (6, 6)           | Concordant             |
+| (Kiwi, Lemon)         | (6, 6)           | (4, 5)           | Concordant             |
+| (Kiwi, Mango)         | (6, 6)           | (4, 6)           | Concordant             |
+| (Lemon, Mango)        | (6, 6)           | (5, 6)           | Concordant             |
+
+**Step 3:** Calculate Kendall's Tau:  
+Count of concordant pairs $C=43$  
+Count of discordant pairs $D=12$  
+Total pairs $n=55$
+
+$$
+\tau = \frac{C-D}{\binom{11}{2}}=\frac{42-13}{55}\approx 0.53
+$$
+
+So, Kendall's Tau for the two persons' rankings is approximately $0.53$.

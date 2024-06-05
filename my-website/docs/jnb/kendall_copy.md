@@ -3,7 +3,7 @@ sidebar_position: 800
 ---
 # Kendall Tau Distance
 
-**In this Jupyter notebook, we will calculate the Kendall $\boldsymbol{\tau}$ distance for a slightly complex scenario described below.**
+**In these notes, we will calculate the Kendall $\boldsymbol{\tau}$ distance for a slightly complex scenario described below.**
 
 ## Scenario
 Suppose there are two individuals, A and B. Each person needs to rank their top 5 favorite fruits from a list of 11 fruits. How can we calculate the Kendall $\boldsymbol{\tau}$ distance in this case?

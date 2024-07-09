@@ -152,15 +152,7 @@ const config = {
             
           },
 
-          {
-            type: 'docSidebar',
-            sidebarId: 'ppSidebar',
-            position: 'left',
-            label: 'Protected',
-            
-          },
-
-          
+         
 
 
           /*{

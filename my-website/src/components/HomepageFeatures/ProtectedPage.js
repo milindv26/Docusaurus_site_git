@@ -1,7 +1,7 @@
-// src/pages/ProtectedPage.js
+// src/components/ProtectedPage.js
 import React, { useState } from 'react';
 
-const ProtectedPage = () => {
+const ProtectedPage = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
 
@@ -17,12 +17,7 @@ const ProtectedPage = () => {
   };
 
   if (isAuthenticated) {
-    return (
-      <div>
-        <h1>Protected Page</h1>
-        <p>This is the protected content.</p>
-      </div>
-    );
+    return <div>{children}</div>;
   }
 
   return (

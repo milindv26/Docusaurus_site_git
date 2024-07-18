@@ -64,3 +64,40 @@
   padding-right: 0.5rem;
 }
 
+/* Custom CSS for the navigation menu */
+
+/* Base styles for menu items */
+.navbar__item a {
+  font-size: 1rem !important; /* Use rem or em for responsive font sizes */
+  line-height: 1.5 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar__item a {
+    font-size: 0.9rem !important; /* Adjust font size for smaller screens */
+    line-height: 1.4 !important;
+    letter-spacing: 0.015em !important;
+  }
+}
+
+/* Styles for very small screens */
+@media (max-width: 480px) {
+  .navbar__item a {
+    font-size: 0.8rem !important; /* Further adjust font size for very small screens */
+    line-height: 1.3 !important;
+    letter-spacing: 0.01em !important;
+  }
+}
+
+/* Improve Font Rendering */
+.navbar__item a {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Ensure Sufficient Contrast */
+.navbar__item a {
+  color: #333 !important; /* Ensure good contrast */
+}

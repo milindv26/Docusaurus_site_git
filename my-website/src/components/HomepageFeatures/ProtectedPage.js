@@ -5,7 +5,7 @@ const ProtectedPage = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
 
-  const correctPassword = 'ohmslaw';
+  const correctPassword = '1';
 
   const handleSubmit = (e) => {
     e.preventDefault();

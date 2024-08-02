@@ -10,6 +10,7 @@ import contentTitle from './remark/contentTitle';
 import toc from './remark/toc';
 import transformImage from './remark/transformImage';
 import transformLinks from './remark/transformLinks';
+import resolveMarkdownLinks from './remark/resolveMarkdownLinks';
 import details from './remark/details';
 import head from './remark/head';
 import mermaid from './remark/mermaid';
@@ -47,11 +48,6 @@ type SimpleProcessor = {
   }) => Promise<SimpleProcessorResult>;
 };
 
-async function getDefaultRemarkPlugins(): Promise<MDXPlugin[]> {
-  const {default: emoji} = await import('remark-emoji');
-  return [headings, emoji, toc];
-}
-
 export type MDXPlugin = Pluggable;
 
 export type MDXOptions = {
@@ -86,8 +82,18 @@ async function createProcessorFactory() {
   const {default: comment} = await import('@slorber/remark-comment');
   const {default: directive} = await import('remark-directive');
   const {VFile} = await import('vfile');
+  const {default: emoji} = await import('remark-emoji');
 
-  const defaultRemarkPlugins = await getDefaultRemarkPlugins();
+  function getDefaultRemarkPlugins({options}: {options: Options}): MDXPlugin[] {
+    return [
+      [
+        headings,
+        {anchorsMaintainCase: options.markdownConfig.anchors.maintainCase},
+      ],
+      emoji,
+      toc,
+    ];
+  }
 
   // /!\ this method is synchronous on purpose
   // Using async code here can create cache entry race conditions!
@@ -104,7 +110,7 @@ async function createProcessorFactory() {
       directive,
       [contentTitle, {removeContentTitle: options.removeContentTitle}],
       ...getAdmonitionsPlugins(options.admonitions ?? false),
-      ...defaultRemarkPlugins,
+      ...getDefaultRemarkPlugins({options}),
       details,
       head,
       ...(options.markdownConfig.mermaid ? [mermaid] : []),
@@ -115,6 +121,13 @@ async function createProcessorFactory() {
           siteDir: options.siteDir,
         },
       ],
+      // TODO merge this with transformLinks?
+      options.resolveMarkdownLink
+        ? [
+            resolveMarkdownLinks,
+            {resolveMarkdownLink: options.resolveMarkdownLink},
+          ]
+        : undefined,
       [
         transformLinks,
         {

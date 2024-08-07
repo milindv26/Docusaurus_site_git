@@ -138,9 +138,9 @@ const config = {
 
           {
             type: 'docSidebar',
-            sidebarId: 'cryptoSidebar',
+            sidebarId: 'mlSidebar',
             position: 'left',
-            label: 'Cryptography',
+            label: 'Machine Learning',
             
           },
 
@@ -148,7 +148,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'fqcmdSidebar',
             position: 'left',
-            label: 'Frequent Commands',
+            label: 'Commands',
             
           },
 

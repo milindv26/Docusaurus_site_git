@@ -140,7 +140,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'mlSidebar',
             position: 'left',
-            label: 'Machine Learning',
+            label: 'ML',
             
           },
 

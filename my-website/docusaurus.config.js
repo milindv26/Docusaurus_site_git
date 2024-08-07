@@ -118,7 +118,7 @@ const config = {
             position: 'left',
             label: 'Empirical IO',
             
-          },
+          },/*
 
           {
             type: 'docSidebar',
@@ -126,7 +126,7 @@ const config = {
             position: 'left',
             label: 'Linear Algebra',
             
-          },
+          },*/
 
           {
             type: 'docSidebar',
